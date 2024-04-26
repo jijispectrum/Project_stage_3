@@ -1,0 +1,375 @@
+{% load static %}
+{% include 'header.html' %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+
+  <title>
+    GemGlow
+  </title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- Your content here -->
+  </div>
+</body>
+
+</html> 
+
+  <div class="hero_area">
+  
+  
+
+    {% if user.is_authenticated %}
+    <!-- Show content for authenticated users -->
+    <p>Welcome, {{ user.username }}!</p>
+    {% else %}
+    <!-- Show content for anonymous users -->
+    <p>Please log in to access this page.</p>
+    {% endif %}
+
+</div>
+  <!-- end hero area -->
+
+  <!-- shop section -->
+
+  <section class="shop_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Latest Products
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="{% url 'product_detail' pk=1 %}"> 
+              <div class="img-box">
+                <img src="{% static 'images/ring.jpeg' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  Ring
+                </h6>
+                <h6>
+                  Price
+                  <span>
+                    $200
+                  </span>
+                </h6>
+              </div>
+              <div class="buttons">
+                <a href="#" class="btn btn-primary btn-sm">
+                    <img src="{% static 'images/cart.png' %}" alt="Cart Icon" class="icon cart-icon"> 
+                </a>
+                <a href="" class="btn btn-success btn-sm">
+                    <img src="{% static 'images/wishlist.jpeg' %}" alt="Buy Now Icon" class="icon buy-now-icon"> 
+                </a>
+            </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="{% url 'product_detail' pk=2 %}">
+              <div class="img-box">
+                <img src="{% static 'images/watch.jpeg' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  Watch
+                </h6>
+                <h6>
+                  Price
+                  <span>
+                    $300
+                  </span>
+                </h6>
+              </div>
+              <div class="buttons">
+                <a href="#" class="btn btn-primary btn-sm">
+                    <img src="{% static 'images/cart.png' %}" alt="Cart Icon" class="icon cart-icon"> 
+                </a>
+                <a href="#" class="btn btn-success btn-sm">
+                    <img src="{% static 'images/wishlist.jpeg' %}" alt="Buy Now Icon" class="icon buy-now-icon"> 
+                </a>
+
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="{% url 'product_detail' pk=3 %}">
+              <div class="img-box">
+                <img src="{% static 'images/banglle.jpeg' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  Bangle
+                </h6>
+                <h6>
+                  Price
+                  <span>
+                    $110
+                  </span>
+                </h6>
+              </div>
+              
+              <div class="buttons">
+                <a href="#" class="btn btn-primary btn-sm">
+                    <img src="{% static 'images/cart.png' %}" alt="Cart Icon" class="icon cart-icon"> 
+                </a>
+                <a href="#" class="btn btn-success btn-sm">
+                    <img src="{% static 'images/wishlist.jpeg' %}" alt="Buy Now Icon" class="icon buy-now-icon"> 
+                </a>
+
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="{% url 'product_detail' pk=4 %}">
+              <div class="img-box">
+                <img src="{% static 'images/earing.jpeg' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                 Earing
+                </h6>
+                <h6>
+                  Price
+                  <span>
+                    $45
+                  </span>
+                </h6>
+              </div>
+              <div class="buttons">
+                <a href="#" class="btn btn-primary btn-sm">
+                    <img src="{% static 'images/cart.png' %}" alt="Cart Icon" class="icon cart-icon"> 
+                </a>
+                <a href="#" class="btn btn-success btn-sm">
+                    <img src="{% static 'images/wishlist.jpeg' %}" alt="Buy Now Icon" class="icon buy-now-icon"> 
+                </a>
+            </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="{% url 'product_detail' pk=5 %}">
+              <div class="img-box">
+                <img src="{% static 'images/Anklet.jpeg' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  Anklet
+                </h6>
+                <h6>
+                  Price
+                  <span>
+                    $95
+                  </span>
+                </h6>
+              </div>
+              <div class="buttons">
+                <a href="#" class="btn btn-primary btn-sm">
+                    <img src="{% static 'images/cart.png' %}" alt="Cart Icon" class="icon cart-icon"> 
+                </a>
+                <a href="#" class="btn btn-success btn-sm">
+                    <img src="{% static 'images/wishlist.jpeg' %}" alt="Buy Now Icon" class="icon buy-now-icon"> 
+                </a>
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="{% url 'product_detail' pk=6 %}">
+              <div class="img-box">
+                <img src="{% static 'images/Nosestud.jpeg' %}"" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  Nose Stud
+                </h6>
+                <h6>
+                  Price
+                  <span>
+                    $70
+                  </span>
+                </h6>
+              </div>
+              <div class="buttons">
+                <a href="#" class="btn btn-primary btn-sm">
+                    <img src="{% static 'images/cart.png' %}" alt="Cart Icon" class="icon cart-icon"> 
+                </a>
+                <a href="#" class="btn btn-success btn-sm">
+                    <img src="{% static 'images/wishlist.jpeg' %}" alt="Buy Now Icon" class="icon buy-now-icon"> 
+                </a>
+            </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href=" {% url 'product_detail' pk=7 %}">
+              <div class="img-box">
+                <img src="{% static 'images/Necklace.jpeg' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  Necklace
+                </h6>
+                <h6>
+                  Price
+                  <span>
+                    $400
+                  </span>
+                </h6>
+              </div>
+              <div class="buttons">
+                <a href="#" class="btn btn-primary btn-sm">
+                    <img src="{% static 'images/cart.png' %}" alt="Cart Icon" class="icon cart-icon"> 
+                </a>
+                <a href="#" class="btn btn-success btn-sm">
+                    <img src="{% static 'images/wishlist.jpeg' %}" alt="Buy Now Icon" class="icon buy-now-icon"> 
+                </a>
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="{% url 'product_detail' pk=8 %}">
+              <div class="img-box">
+                <img src="{% static 'images/Bracelet.jpeg' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                Bracelet
+                </h6>
+                <h6>
+                  Price
+                  <span>
+                    $450
+                  </span>
+                </h6>
+              </div>
+              <div class="buttons">
+                <a href="#" class="btn btn-primary btn-sm">
+                    <img src="{% static 'images/cart.png' %}" alt="Cart Icon" class="icon cart-icon"> 
+                </a>
+                <a href="#" class="btn btn-success btn-sm">
+                    <img src="{% static 'images/wishlist.jpeg' %}" alt="Buy Now Icon" class="icon buy-now-icon"> 
+                </a>
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="">
+          View All Products
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end shop section -->
+
+ 
+
+
+ 
+  
+    <!-- footer section -->
+    <footer class=" footer_section">
+      <div class="container">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By
+          <a href="https://html.design/">GemGlow Collections</a>
+        </p>
+      </div>
+    </footer>
+    <!-- footer section -->
+
+  </section>
+
+  <!-- end info section -->
+
+
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>
